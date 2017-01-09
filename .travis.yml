@@ -1,2 +1,6 @@
+install: true
+script:
+    - echo "Commit received !"
+
 notifications:
   slack: hpy-weplay:tiKqOn46GotgV6hbaSFzAzms
