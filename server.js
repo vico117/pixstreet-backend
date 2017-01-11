@@ -48,8 +48,8 @@ var router = express.Router(); // get an instance of the express Router
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
-router.use('/location', require('./routes/location'));
-router.use('/score', require('./routes/score'));
+router.use('/location', require('./routes/Location'));
+router.use('/score', require('./routes/Score'));
 
 
 app.use('/api',router);
