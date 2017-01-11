@@ -14,8 +14,8 @@
     "nodejs"
   ],
   "author": "Benjamin Debotté",
-  "license": "UNLICENSED",
-  "homepage": "https://bitbucket.org/alfanetproject/badger-backend#readme",
+  "license": "CC-BY",
+  "homepage": "https://github.com/WePlay-HPY/pixstreet-backend",
   "dependencies": {
     "async": "^2.1.4",
     "babel-core": "^6.21.0",
