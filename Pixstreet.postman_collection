@@ -1,0 +1,172 @@
+{
+	"id": "284739c7-3ece-18c6-69e9-58693c78031c",
+	"name": "Pixstreet",
+	"description": "",
+	"order": [
+		"50982cd8-0634-2b4c-cc04-fbd6a4937d4d",
+		"db178f3a-477c-42a8-e4ea-f6a1b15b811e",
+		"2b0dbaa4-9a32-6567-0c83-90f631413d28",
+		"bcef46e8-4ddb-2657-c63c-02a36391cf8e"
+	],
+	"folders": [],
+	"timestamp": 1484141319180,
+	"owner": "1133186",
+	"public": false,
+	"requests": [
+		{
+			"id": "2b0dbaa4-9a32-6567-0c83-90f631413d28",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://localhost:8000/api/location",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "284739c7-3ece-18c6-69e9-58693c78031c",
+			"data": [
+				{
+					"key": "event",
+					"value": "EVENT_IN",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "employee",
+					"value": "58595086d36a316c427630b0",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "badge",
+					"value": "58595104d36a316c427630b1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/location/:id",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1484141365416,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "50982cd8-0634-2b4c-cc04-fbd6a4937d4d",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://localhost:8000/api/location",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "284739c7-3ece-18c6-69e9-58693c78031c",
+			"data": [
+				{
+					"key": "event",
+					"value": "EVENT_IN",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "employee",
+					"value": "58595086d36a316c427630b0",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "badge",
+					"value": "58595104d36a316c427630b1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/location",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1484141365416,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "bcef46e8-4ddb-2657-c63c-02a36391cf8e",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://localhost:8000/api/location/-0.3375991&49.1672968&1500",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "event",
+					"value": "EVENT_IN",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "employee",
+					"value": "58595086d36a316c427630b0",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "badge",
+					"value": "58595104d36a316c427630b1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1484151079038,
+			"name": "http://localhost:8000/api/location/:lon&:lat&:distance",
+			"description": "",
+			"collectionId": "284739c7-3ece-18c6-69e9-58693c78031c",
+			"responses": []
+		},
+		{
+			"id": "db178f3a-477c-42a8-e4ea-f6a1b15b811e",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://localhost:8000/api/score",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "284739c7-3ece-18c6-69e9-58693c78031c",
+			"data": [
+				{
+					"key": "score",
+					"value": "12",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "D4rKévin",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "node_id",
+					"value": "2162834567",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/save",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1484146800382,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "pixstreet-backend",
+  "version": "1.0.0",
+  "description": "Back-end of PixStreet project",
+  "main": "server.js",
+  "scripts": {
+    "test": "true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WePlay-HPY/pixstreet-backend.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Benjamin Debotté",
+  "license": "CC-BY",
+  "homepage": "https://github.com/WePlay-HPY/pixstreet-backend",
+  "dependencies": {
+    "async": "^2.1.4",
+    "babel-core": "^6.21.0",
+    "babel-polyfill": "^6.20.0",
+    "body-parser": "^1.15.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "express-validator": "^3.1.1",
+    "mongoose": "^4.7.4",
+    "request": "^2.79.0"
+  }
+}
