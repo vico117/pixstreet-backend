@@ -9,7 +9,7 @@ var schemaOptions = {
 
 var minigameSchema = new mongoose.Schema({
     name: String,
-    tags: mongoose.Schema.Types.Mixed,
+    tags: mongoose.Schema.Types.Mixed
 }, schemaOptions);
 
 var Minigame = mongoose.model('Minigame', minigameSchema);
