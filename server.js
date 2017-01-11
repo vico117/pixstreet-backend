@@ -29,7 +29,7 @@ mongoose.connection.on('error', function() {
     process.exit(1);
 });
 
-app.set('port', 8000);
+app.set('port', process.env.PORT || 8000);
 
 // CORS
 app.use(function(req, res, next) {
