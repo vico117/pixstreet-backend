@@ -3,7 +3,9 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var mongoose = require('mongoose');
 var request = require('request');
+var dotenv = require('dotenv');
 
+dotenv.load()
 
 // ES6 Transpiler
 require('babel-core/register');
@@ -21,10 +23,9 @@ var scoreController = require('./controllers/Score');
 
 var app = express();
 
-
-mongoose.connect('mongodb://localhost:27017/pixstreet');
+mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on('error', function() {
-    console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
+    console.log('MongoDB Connection Error. Please make sure that MongoDB is running or MONGODB_URI environment variable is defined.');
     process.exit(1);
 });
 
