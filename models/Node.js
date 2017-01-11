@@ -10,8 +10,7 @@ var schemaOptions = {
 var nodeSchema = new mongoose.Schema({
     type: String,
     id: Number,
-    lat: Number,
-    lon: Number,
+    loc : { type: [Number], index: '2dsphere' },
     tags: mongoose.Schema.Types.Mixed,
     minigame: {type: mongoose.Schema.Types.ObjectId, ref: 'MiniGame'},
     score: {type: mongoose.Schema.Types.ObjectId, ref: 'Score'},

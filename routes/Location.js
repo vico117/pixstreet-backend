@@ -1,16 +1,13 @@
 var express = require('express');
 
-var badgeController = require('../controllers/Badge');
+var locationController = require('../controllers/Location');
 
 // ROUTES FOR OUR API
 // =============================================================================
-var badgeRouter = express.Router(); // get an instance of the express Router
+var locationRouter = express.Router(); // get an instance of the express Router
 
-badgeRouter.get('/', badgeController.badgeGetAll);
-badgeRouter.post('/', badgeController.badgePost);
+locationRouter.get('/', locationController.locationGetAll);
+locationRouter.get('/:id', locationController.locationGetFromId);
+locationRouter.get('/:lon&:lat&distance', locationController.locationGetArrayFromCoordonates);
 
-badgeRouter.get('/:id', badgeController.badgeGet);
-badgeRouter.delete('/:id', badgeController.badgeDelete);
-badgeRouter.put('/:id', badgeController.badgePut);
-
-module.exports = badgeRouter;
+module.exports = locationRouter;

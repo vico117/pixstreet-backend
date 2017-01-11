@@ -18,6 +18,7 @@
   "license": "UNLICENSED",
   "homepage": "https://bitbucket.org/alfanetproject/badger-backend#readme",
   "dependencies": {
+    "async": "^2.1.4",
     "babel-core": "^6.21.0",
     "babel-polyfill": "^6.20.0",
     "body-parser": "^1.15.2",
