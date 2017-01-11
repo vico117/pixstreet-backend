@@ -1,6 +1,12 @@
-install: true
-script:
-    - echo "Commit received !"
+language: node_js
+node_js:
+  - "6"
 
+before_script:
+  - npm install
+
+script:
+  - node server.js &
+  - npm test
 notifications:
   slack: hpy-weplay:tiKqOn46GotgV6hbaSFzAzms
