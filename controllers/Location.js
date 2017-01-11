@@ -4,7 +4,7 @@ var async = require('async');
 
 
 exports.locationGetCorrectCoordonnates = function(req, res, next) {
-        /* This piece of code  */
+        /* This piece of code has no point besides convertion OSM -> MongoDB */
         Node.find({}, function(err, nodes) {
         if (err){
             res.send(err);

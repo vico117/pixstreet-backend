@@ -18,6 +18,7 @@ var MiniGame = require('./models/MiniGame');
 
 // Controllers
 var locationController = require('./controllers/Location');
+var miniGameController = require('./controllers/MiniGame');
 var scoreController = require('./controllers/Score');
 
 
@@ -50,6 +51,7 @@ var router = express.Router(); // get an instance of the express Router
 // all of our routes will be prefixed with /api
 router.use('/location', require('./routes/Location'));
 router.use('/score', require('./routes/Score'));
+router.use('/game', require('./routes/MiniGame'));
 
 
 app.use('/api',router);
