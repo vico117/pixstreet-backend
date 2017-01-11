@@ -4,28 +4,33 @@ var async = require('async');
 
 
 exports.locationGetCorrectCoordonnates = function(req, res, next) {
-        Node.findOne({}, function(err, node) {
+        /* This piece of code  */
+        Node.find({}, function(err, nodes) {
         if (err){
             res.send(err);
             return;
         }
 
-        console.log(node);
-        console.log(node.lon);
 
-        //nodes.forEach(function(node) {
+        async.each(nodes, function(node, callback) {
             var loc = [node.toObject().lon, node.toObject().lat];
             node.loc = loc;
             node.lat = undefined;
             node.lon = undefined;
             node.save(function(err) {
                 if(err) {
-                    res.json(err);
+                    callback(err);
                     return;
                 }
-                res.json(node);
+                callback();
             });
-        //});
+        }, function(err) {
+            if (err){
+                res.send(err);
+                return;
+            }
+            res.json("Success");
+        });
 
     });
 };
@@ -54,17 +59,19 @@ exports.locationGetAll = function(req,res,next) {
 }
 
 exports.locationGetArrayFromCoordonates = function(req, res, next) {
-        Node.find({})
-        .near({
-            center: [req.params.lon, req.params.lat],
-            maxDistance: req.params.distance || 15000, //15km
-            spherical: true
-        })
-        .exec(function(err, nodes) {
-            if (err){
-                res.send(err);
-                return;
-            }
+    console.log(req.params);
+    Node.find({})
+    .where('loc')
+    .near({
+        center: { type: 'Point', coordinates: [req.params.lon, req.params.lat] },
+        maxDistance: req.params.distance || 15000, //15km
+        spherical: true
+    })
+    .exec(function(err, nodes) {
+        if (err){
+            res.send(err);
+            return;
+        }
         res.json(nodes);
     });
 };
