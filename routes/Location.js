@@ -6,8 +6,10 @@ var locationController = require('../controllers/Location');
 // =============================================================================
 var locationRouter = express.Router(); // get an instance of the express Router
 
+locationRouter.get('/correct', locationController.locationGetCorrectCoordonnates);
 locationRouter.get('/', locationController.locationGetAll);
-locationRouter.get('/:id', locationController.locationGetFromId);
 locationRouter.get('/:lon&:lat&distance', locationController.locationGetArrayFromCoordonates);
+locationRouter.get('/:id', locationController.locationGetFromId);
+
 
 module.exports = locationRouter;

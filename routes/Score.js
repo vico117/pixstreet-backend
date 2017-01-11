@@ -1,16 +1,12 @@
 var express = require('express');
 
-var badgeController = require('../controllers/Badge');
+var scoreController = require('../controllers/Score');
 
 // ROUTES FOR OUR API
 // =============================================================================
-var badgeRouter = express.Router(); // get an instance of the express Router
+var scoreRouter = express.Router(); // get an instance of the express Router
 
-badgeRouter.get('/', badgeController.badgeGetAll);
-badgeRouter.post('/', badgeController.badgePost);
+scoreRouter.post('/', scoreController.scorePost);
 
-badgeRouter.get('/:id', badgeController.badgeGet);
-badgeRouter.delete('/:id', badgeController.badgeDelete);
-badgeRouter.put('/:id', badgeController.badgePut);
 
-module.exports = badgeRouter;
+module.exports = scoreRouter;
